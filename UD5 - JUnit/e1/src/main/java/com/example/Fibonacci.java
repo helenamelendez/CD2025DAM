@@ -2,8 +2,18 @@ package com.example;
 
 import java.math.BigInteger;
 
+/**Clase Fibonacci
+ * @author A25HelenaMS
+ */
 public class Fibonacci {
 
+    /**
+     * Funcion fibonacci
+     * Calcula la progrecion de fibonacci de un numero recibido por parametro
+     * @param n Numero a calcular
+     * @return Numero BigInteger resultado del calculo
+     * @throws Exception Excepción que se lanza cuando el numero recibido por parametro es inferior a cero
+     */
     public BigInteger fibonacci(int n) throws Exception {
         if (n < 0) {
             throw new Exception("Error. El número tiene que ser >=0");
