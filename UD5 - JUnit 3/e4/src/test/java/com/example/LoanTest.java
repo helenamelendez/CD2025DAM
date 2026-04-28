@@ -14,7 +14,7 @@ public class LoanTest {
     Loan loanTest = new Loan(loanBookTest, loanUserTest);
     assertEquals(loanBookTest, loanTest.getBook());
     assertEquals(loanUserTest, loanTest.getUser());
-    assertEquals(LocalDate.class, loanTest.getStartDate());
+    assertEquals(LocalDate.now(), loanTest.getStartDate());
     assertFalse(loanTest.getStartDate() == null);
     }
 
@@ -28,6 +28,4 @@ public class LoanTest {
     assertFalse(loanTest.isActive());
     }
     
-
-
 }
