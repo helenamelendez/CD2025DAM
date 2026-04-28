@@ -8,40 +8,40 @@ import org.junit.jupiter.api.Test;
 public class UserTest {
       @Test
     void testConstructor(){
-        User UserTest = new User("01", "Helena");
-        assertEquals("01", UserTest.getId());
-        assertEquals("Helena", UserTest.getName());
-        assertTrue(UserTest.getLoans().isEmpty());
+        User userTest = new User("01", "Helena");
+        assertEquals("01", userTest.getId());
+        assertEquals("Helena", userTest.getName());
+        assertTrue(userTest.getLoans().isEmpty());
     }
 
         @Test
     void testAddLoans(){
-        Book BookTest = new Book("001", "Guideon la novena");
-        User UserTest = new User("01", "Helena");
-        assertTrue(UserTest.getLoans().isEmpty());
-        Loan loanTest = new Loan(BookTest, UserTest);
-        UserTest.addLoan(loanTest);
-        assertFalse(UserTest.getLoans().isEmpty());
-        assertEquals(1, UserTest.getLoans().size());
-        UserTest.addLoan(loanTest);
-        assertEquals(2, UserTest.getLoans().size());
-        UserTest.addLoan(loanTest);
-        assertThrows(IllegalStateException.class, () -> {UserTest.addLoan(loanTest);});
+        Book bookTest = new Book("001", "Guideon la novena");
+        User userTest = new User("01", "Helena");
+        assertTrue(userTest.getLoans().isEmpty());
+        Loan loanTest = new Loan(bookTest, userTest);
+        userTest.addLoan(loanTest);
+        assertFalse(userTest.getLoans().isEmpty());
+        assertEquals(1, userTest.getLoans().size());
+        userTest.addLoan(loanTest);
+        assertEquals(2, userTest.getLoans().size());
+        userTest.addLoan(loanTest);
+        assertThrows(IllegalStateException.class, () -> {userTest.addLoan(loanTest);});
     }
 
 
         @Test
     void testRemoveLoans(){
-        Book BookTest = new Book("001", "Guideon la novena");
-        User UserTest = new User("01", "Helena");
-        assertTrue(UserTest.getLoans().isEmpty());
-        Loan loanTest = new Loan(BookTest, UserTest);
-        UserTest.addLoan(loanTest);
-        assertFalse(UserTest.getLoans().isEmpty());
-        assertEquals(1, UserTest.getLoans().size());
-        UserTest.removeLoan(loanTest);
-        assertTrue(UserTest.getLoans().isEmpty());
-        assertEquals(0, UserTest.getLoans().size());
+        Book bookTest = new Book("001", "Guideon la novena");
+        User userTest = new User("01", "Helena");
+        assertTrue(userTest.getLoans().isEmpty());
+        Loan loanTest = new Loan(bookTest, userTest);
+        userTest.addLoan(loanTest);
+        assertFalse(userTest.getLoans().isEmpty());
+        assertEquals(1, userTest.getLoans().size());
+        userTest.removeLoan(loanTest);
+        assertTrue(userTest.getLoans().isEmpty());
+        assertEquals(0, userTest.getLoans().size());
     }
 
 
