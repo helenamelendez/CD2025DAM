@@ -1,0 +1,7 @@
+sqp_5c31239f0e78967c26e6704198404811075a0b4c
+
+RUNNING
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=EJ05 \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=sqp_5c31239f0e78967c26e6704198404811075a0b4c
